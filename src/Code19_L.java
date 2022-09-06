@@ -1,4 +1,4 @@
-import basicArray.Operations_1D_array;
+import array_2D.Operation_2D_array;
 
 import java.util.Scanner;
 
@@ -11,12 +11,16 @@ public class Code19_L {
         m = scan.nextInt();
         System.out.println("Enter the no of columns : ");
         n = scan.nextInt();
-        int[][] arr = new int[m][n];
 
-        Operations_1D_array.input(arr, scan);
+        int[][] arr1 = new int[m][n];
+        Operation_2D_array.input(arr1, scan);
 
+        int[][] arr2 = new int[m][n];
+        Operation_2D_array.input(arr2, scan);
 
+        int[][] arr = Operation_2D_array.add(arr1, arr2);
 
+        Operation_2D_array.output(arr);
 
     }
 }

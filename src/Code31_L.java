@@ -15,10 +15,21 @@ public class Code31_L {
         Operation_2D_array.input(arr, scan);
 
         for (int i = 0; i < n; i++) {
-            if (arr[i][i] != 1) {
-                System.out.println("This is not an Identity Matrix ");
-                return;
+            for (int j = 0; j < n; j++) {
+                if (i==j) {
+                    if (arr[i][j] != 1) {
+                        System.out.println("This is not an Identity Matrix ");
+                        return;
+                    }
+                }
+                else {
+                    if (arr[i][j] != 0){
+                        System.out.println("This is not an Identity Matrix ");
+                        return;
+                    }
+                }
             }
+
         }
 
         System.out.println("This is an Identity Matrix ");

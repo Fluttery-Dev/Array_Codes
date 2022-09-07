@@ -21,6 +21,12 @@ public class Code21_L {
 
         int[][] arr = Operation_2D_array.multiply(arr1, arr2);
 
+        System.out.println("The First matrix is : ");
+        Operation_2D_array.output(arr1);
+        System.out.println("The Second matrix is : ");
+        Operation_2D_array.output(arr2);
+
+        System.out.println("The Product of two matrix is : ");
         Operation_2D_array.output(arr);
 
     }

@@ -1,3 +1,5 @@
+// The outpuyt of the question given in the pdf is wrong
+
 import basicArray.Operations_1D_array;
 
 import java.util.Scanner;

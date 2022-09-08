@@ -4,7 +4,7 @@ import basicArray.Operations_1D_array;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Code_6
+public class Code6_L
 {
     public static void main(String[] args) {
         int n;

@@ -1,17 +1,20 @@
 import basicArray.Operations_1D_array;
 
 import java.util.Scanner;
+import java.util.Vector;
 
 public class main {
     public static void main(String[] args){
 
-        int n;
+        Vector<Integer> arr = new Vector<Integer>();
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter the size of the array : ");
-        n = scan.nextInt();
-        int[] arr = new int[n];
+        System.out.println("Enter the Elements of the array : ");
 
-        Operations_1D_array.input(arr, scan);
+        String[] strNums = scan.nextLine().split(" ");
+
+        for (int i = 0; i < strNums.length; i++) {
+            arr.add(Integer.parseInt(strNums[i]));
+        }
 
 
     }

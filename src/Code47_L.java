@@ -1,4 +1,3 @@
-//Program is not working correctly, problem with -ve numbers
 
 import basicArray.Operations_1D_array;
 
@@ -23,43 +22,13 @@ public class Code47_L {
         System.out.println("Enter the sum : ");
         int sum = scan.nextInt();
 
-        int i = 0;
-        int j = 0;
-        int sum_till_now = 0;
 
-        Vector<Pair> negative_pairs = new Vector<Pair>(0);
-
-        while(j <= arr.length){
-
-            if(sum_till_now > sum){
-                sum_till_now -= arr[i];
-                i++;
-            }
-            else if(sum_till_now == sum){
-                pairs.addElement(new Pair(i,j));
-                if(j < arr.length) {
-                    sum_till_now += arr[j];
-                    if(arr[j] < 0)
-                        negative_pairs.addElement(new Pair(j,sum_till_now));
-                }
-                j++;
-            }
-            else if(sum_till_now < sum){
-                if(negative_pairs.isEmpty()) {
-                    if(j < arr.length) {
-                        sum_till_now += arr[j];
-                        if(arr[j] < 0)
-                            negative_pairs.addElement(new Pair(j,sum_till_now));
-                    }
-                    j++;
-                }
-                else{
-                    Pair p = negative_pairs.elementAt(0);
-                    negative_pairs.removeElementAt(0);
-                    i = p.start + 1;
-                    int temp  = p.end;
-                    sum_till_now-=temp;
-
+        for (int i = 0; i < arr.length; i++) {
+            int sum_till_now = 0;
+            for (int j = i; j < arr.length; j++) {
+                sum_till_now+=arr[j];
+                if(sum_till_now == sum){
+                    pairs.addElement(new Pair(i, j+1));
                 }
             }
         }

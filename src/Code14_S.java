@@ -30,4 +30,4 @@ public class Code14_S
             System.out.print(a[n]);
         }
     }
-
+    

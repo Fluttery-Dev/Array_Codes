@@ -1,4 +1,3 @@
-//Program is not working correctly, problem with -ve numbers
 
 import basicArray.Operations_1D_array;
 
